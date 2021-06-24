@@ -1,0 +1,17 @@
+@import "../App.scss";
+
+.main{
+  &__titleBox{
+    @include row;
+  }
+  &__title{
+     text-transform: uppercase;
+  &--stroke{
+    color: $secondary;
+    @include text-border;
+  }
+  &--firstWord{
+    padding-right: 2rem;
+  }
+  }
+}

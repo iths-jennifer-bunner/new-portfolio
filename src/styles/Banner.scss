@@ -1,0 +1,104 @@
+@import "../App.scss";
+
+.banner {
+  z-index: 100;
+  position: relative;
+  .banner-row {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    @include md {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    &.center {
+      justify-content: center;
+      text-align: center;
+      .row-letter {
+        left: 0;
+      }
+    }
+    &.right {
+      justify-content: flex-end;
+    }
+    .row-title,
+    .row-letter {
+      font-family: $headline-primary;
+      text-transform: lowercase;
+      font-size: 6rem;
+      font-weight: 700;
+      position: relative;
+      letter-spacing: -0.2rem;
+      display: inline-block;
+      white-space: nowrap;
+      @include sm {
+        font-size: 11rem;
+        letter-spacing: -0.4rem;
+      }
+      @include md {
+        font-size: 11rem;
+      }
+      @include lg {
+        font-size: 21rem;
+      }
+    }
+    .row-col {
+      width: 70%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      @include md {
+        width: 100%;
+
+      }
+      @media (max-width: 1240px) {
+        &:last-child {
+          display: none;
+        }
+      }
+      .row-message {
+        font-family: $headline-secondary;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        width: 320px;
+      }
+    }
+    .separateWords{
+      position: relative;
+      display: inline-block;
+      white-space: pre-wrap;
+    }
+    .scroll {
+      height: 160px;
+      width: 160px;
+      border-radius: 100%;
+      background: #f0eff1;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      
+      @include md {
+        left: 10px;
+      }
+      @include xxl {
+        left: 160px;
+      }
+      @media (max-width: 1240px) {
+        display: none;
+      }
+      span {
+        font-family: $headline-secondary;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 4px 0;
+      }
+    }
+  }
+}
+
+
