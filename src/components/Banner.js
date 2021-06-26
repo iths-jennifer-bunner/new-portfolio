@@ -34,7 +34,7 @@ const Banner = () => {
   return (
     <div>
       <motion.div className="banner" variants={banner}>
-        <BannerRowTop title={"Hi, i am a "} />
+        <BannerRowTop title={"Hi, i am a"} />
         <BannerRowCenter title={"frontend"} playMarquee={playMarquee} />
         <BannerRowBottom title={"developer"} />
       </motion.div>
@@ -49,8 +49,9 @@ const AnimatedLetters = ({ title, disabled }) => (
     initial="initial"
     animate="animate"
   >
-    {[...title].map((letter) => (
+    {[...title].map((letter, id) => (
       <motion.span
+        key={`${letter}${id}`}
         className="row-letter separateWords"
         variants={disabled ? null : letterAni}
       >

@@ -7,6 +7,7 @@ $headline-secondary: 'Work Sans', sans-serif;
 // COLORS
 $primary: #000;
 $secondary: #fff;
+$background-primary: #f0eff1;
 
 
 @mixin text-border {
@@ -35,6 +36,7 @@ $screen-xl-min: 1200px;
 $screen-xxl-min: 1400px;
 
 $screen-xxxl-min: 1500px;
+
 // Small devices
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {

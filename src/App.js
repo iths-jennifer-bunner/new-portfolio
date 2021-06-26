@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.scss";
 import Banner from "./components/Banner";
-// import MainComponent from "./components/MainComponent";
-
+import MainComponent from "./components/MainComponent";
+import {} from "framer-motion";
 function App() {
   return (
     <div>
       <Banner />
-      {/* <MainComponent /> */}
+      <MainComponent />
     </div>
   );
 }

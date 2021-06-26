@@ -1,17 +1,60 @@
 @import "../App.scss";
 
 .main{
+  &__wrapper{
+    padding: 10rem 2rem;
+    @include md{
+      padding: 10rem;
+    }
+  }
   &__titleBox{
     @include row;
+    justify-content: center;
+    padding: 0 0 10rem 0;;
   }
   &__title{
-     text-transform: uppercase;
-  &--stroke{
-    color: $secondary;
-    @include text-border;
-  }
-  &--firstWord{
-    padding-right: 2rem;
-  }
+    text-transform: lowercase;
+    &--stroke{
+      color: $secondary;
+      @include text-border;
+    }
+    &--firstWord{
+      padding-right: 2rem;
+    }
   }
 }
+.portfolio{
+  @include row;
+  justify-content: flex-start;
+  align-items: center;
+
+    &__imgContainer{
+      height: auto;
+      width: auto;
+      background-color: $background-primary;
+      @include lg{
+        height: auto;
+        width: 50vw;
+      }
+    }
+    &__img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: drop-shadow(8px 8px 8px #585858) ;
+    }
+
+    &__title{
+      transform: translate(15rem, -10rem);
+      background-color:rgba($secondary, 0.5) ;
+      @include sm{
+        transform: translate(35rem, -15rem);
+      }
+        @include md{
+          transform: translate(25rem, -15rem);
+        }
+        @include xl{
+          transform: translate(-10rem, 10rem); background-color:transparent;
+        }
+    }
+} 
