@@ -19,7 +19,7 @@ const showTitle = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.8,
     },
   },
   hidden: {
@@ -32,7 +32,7 @@ const showSubTitle = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2,
+      duration: 1,
     },
   },
   hidden: {
@@ -152,6 +152,37 @@ function MainComponent() {
               </motion.div>
             )}
           </InView>
+        </section>
+        <section className="portfolio">
+          <InView threshold={0.25} triggerOnce>
+            {({ inView, ref }) => (
+              <div className="portfolio__title">
+                <motion.h2
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showTitle}
+                >
+                  ukkon
+                </motion.h2>
+                <motion.h3
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showSubTitle}
+                >
+                  javascript | html | css
+                </motion.h3>
+              </div>
+            )}
+          </InView>
+          <div className="main__imgContainer main__imgContainer--bocapital">
+            <img
+              src="../../images/ukkon.png"
+              alt="ukkon website"
+              className="main__img "
+            />
+          </div>
         </section>
       </div>
     </>
