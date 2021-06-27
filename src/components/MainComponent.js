@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/MainComponent.scss";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
-const showTitle = {
+const Title = {
   visible: {
     opacity: 1,
     transition: {
@@ -14,49 +14,144 @@ const showTitle = {
     opacity: 0,
   },
 };
+const showTitle = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 200,
+  },
+};
+const showSubTitle = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 200,
+  },
+};
 
 function MainComponent() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
   return (
     <>
       <div className="main__wrapper">
-        <motion.div
-          className="main__titleBox"
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={showTitle}
-        >
-          <h1 className="main__title main__title--firstWord">SELECTED</h1>
-          <h1 className="main__title main__title--stroke"> PROJECTS : </h1>
-        </motion.div>
-        <section className="portfolio">
-          <div className="portfolio__imgContainer">
+        <InView threshold={0.25} triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+              className="main__titleBox"
+              ref={ref}
+              animate={inView ? "visible" : "hidden"}
+              initial="hidden"
+              variants={Title}
+            >
+              <h1 className="main__title main__title--firstWord">SELECTED</h1>
+              <h1 className="main__title main__title--stroke"> PROJECTS : </h1>
+            </motion.div>
+          )}
+        </InView>
+        <section className="boCapital">
+          <div className="main__imgContainer">
             <img
-              src="../../images/portfolio-desktop.png"
+              src="../../images/bocapital.png"
               alt="portfolio website"
-              className="portfolio__img"
+              className="main__img"
             />
           </div>
-          <div>
-            <motion.h2
-              className="portfolio__title"
-              ref={ref}
-              animate={controls}
-              initial="hidden"
-              variants={showTitle}
-            >
-              portfolio
-            </motion.h2>
+          <InView threshold={0.25} triggerOnce>
+            {({ inView, ref }) => (
+              <div className="boCapital__title">
+                <motion.h2
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showTitle}
+                >
+                  bocapital
+                </motion.h2>
+                <motion.h3
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showSubTitle}
+                >
+                  vue.js | javascript | html | sass | quasar | i18n | mailchimp
+                  | tawk.to
+                </motion.h3>
+              </div>
+            )}
+          </InView>
+        </section>
+        <section className="portfolio">
+          <InView threshold={0.25} triggerOnce>
+            {({ inView, ref }) => (
+              <div className="portfolio__title">
+                <motion.h2
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showTitle}
+                >
+                  portfolio
+                </motion.h2>
+                <motion.h3
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showSubTitle}
+                >
+                  react.js | javascript | html | sass | node
+                </motion.h3>
+              </div>
+            )}
+          </InView>
+          <div className="main__imgContainer main__imgContainer--bocapital">
+            <img
+              src="../../images/portfolio.png"
+              alt="bocapital website"
+              className="main__img "
+            />
           </div>
+        </section>
+        <section className="hamster">
+          <div className="hamster__imgContainer">
+            <img
+              src="../../images/hamsterwars.png"
+              alt="hamsterwars website"
+              className="hamster__img"
+            />
+          </div>
+          <InView threshold={0.25} triggerOnce>
+            {({ inView, ref }) => (
+              <motion.div className="boCapital__title">
+                <motion.h2
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showTitle}
+                >
+                  hamsterwars
+                </motion.h2>
+                <motion.h3
+                  ref={ref}
+                  animate={inView ? "visible" : "hidden"}
+                  initial="hidden"
+                  variants={showSubTitle}
+                >
+                  react.js | javascript | html | css | firebase | firestore
+                </motion.h3>
+              </motion.div>
+            )}
+          </InView>
         </section>
       </div>
     </>
