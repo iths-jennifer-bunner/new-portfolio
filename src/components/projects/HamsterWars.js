@@ -47,22 +47,22 @@ function HamsterWars({
   return (
     <div>
       <section className="hamster">
-        <motion.div
-          className="hamster__imgContainer"
-          // ref={ref}
-          animate={inView ? "visible" : "hidden"}
-          initial="hidden"
-          variants={imageLeft}
-        >
-          <img
-            src="../../images/hamsterwars.png"
-            alt="hamsterwars website"
-            className="hamster__img"
-          />
-        </motion.div>
+        <a href="http://fab-hamster-wars.herokuapp.com/">
+          <motion.div
+            className="hamster__imgContainer"
+            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            variants={imageLeft}
+          >
+            <img
+              src="../../images/hamsterwars.png"
+              alt="hamsterwars website"
+              className="hamster__img"
+            />
+          </motion.div>
+        </a>
         <motion.div className="boCapital__title">
           <motion.h2
-            // ref={ref}
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={showTitle}
@@ -74,7 +74,6 @@ function HamsterWars({
             initial="hidden"
             variants={showTitle}
           >
-            {/* {inView} */}
             react.js | javascript | html | css | firebase | firestore
           </motion.h3>
         </motion.div>

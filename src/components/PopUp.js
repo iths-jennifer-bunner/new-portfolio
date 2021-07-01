@@ -16,7 +16,7 @@ const fade = {
   },
 };
 
-function PopUp(props) {
+function PopUp(props, { reference }) {
   function sendEmail(e) {
     e.preventDefault();
 
@@ -49,6 +49,7 @@ function PopUp(props) {
   return (
     <motion.div
       className="popUp__wrapper"
+      ref={reference}
       initial="hidden"
       animate="visible"
       variants={fade}

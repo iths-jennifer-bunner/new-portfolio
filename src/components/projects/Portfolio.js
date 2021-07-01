@@ -63,19 +63,20 @@ function Portfolio({
             react.js | javascript | html | sass | node
           </motion.h3>
         </div>
-
-        <motion.div
-          className="main__imgContainer main__imgContainer--bocapital"
-          animate={inView ? "visible" : "hidden"}
-          initial="hidden"
-          variants={imageRight}
-        >
-          <img
-            src="../../images/portfolio.png"
-            alt="portal website"
-            className="main__img "
-          />
-        </motion.div>
+        <a href="https://jennifer-bunners-portfolio.netlify.app/">
+          <motion.div
+            className="main__imgContainer main__imgContainer--bocapital"
+            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            variants={imageRight}
+          >
+            <img
+              src="../../images/portfolio.png"
+              alt="portal website"
+              className="main__img "
+            />
+          </motion.div>
+        </a>
       </section>
     </div>
   );

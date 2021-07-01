@@ -48,18 +48,20 @@ function BoCapital({
   return (
     <div>
       <section className="boCapital">
-        <motion.figure
-          className="main__imgContainer"
-          animate={inView ? "visible" : "hidden"}
-          initial="hidden"
-          variants={imageLeft}
-        >
-          <img
-            src="../../images/bocapital.png"
-            alt="boCapital website"
-            className="main__img"
-          />
-        </motion.figure>
+        <a href="https://bocapital.se/">
+          <motion.figure
+            className="main__imgContainer"
+            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            variants={imageLeft}
+          >
+            <img
+              src="../../images/bocapital.png"
+              alt="boCapital website"
+              className="main__img"
+            />
+          </motion.figure>
+        </a>
         <div className="boCapital__title">
           <motion.h2
             animate={inView ? "visible" : "hidden"}

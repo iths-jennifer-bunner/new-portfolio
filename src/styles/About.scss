@@ -41,17 +41,22 @@
   } 
   &__titleBox{
   @include row;
-  padding: 5rem 0;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem ;
   @include md{
     padding: 10rem 0;
   }
   } 
   &__title{
     text-transform: uppercase;
+    margin-bottom: 5rem;
     &--stroke{
       @include text-border;
       color: $secondary;
-      padding-right: 10rem;
+      @include md{
+          padding-right: 10rem;
+      }
     }
   }
   &__bubble{
@@ -64,16 +69,17 @@
     border: 1px solid rgba(#919191, 0.6);
     padding: 50px; border-radius: 11px;
     position: relative;
-    box-shadow: 20px 20px #af8383;
+    box-shadow: 20px 20px $background-primary;
     font-family: "Baloo 2" ;
     cursor: pointer;
+    max-width: 20rem;
   }
   &__bubble:after {
     transform: translateY(0px); content: ".";
     animation: float2 5s ease-in-out infinite;
     -webkit-text-fill-color: hsl(0, 0%, 100%);
     -webkit-text-stroke: .5px rgb(0, 0, 0);
-    text-shadow: 22px 22px #af8383;
+    text-shadow: 22px 22px $background-primary;
     text-align: left; font-size: 55px;
     font-weight: bold; line-height: 30px;
     width: 55px; height: 11px;
@@ -83,8 +89,7 @@
     position: absolute;
     display: block; bottom: -30px;
     left: 0; z-index: -2;
-    box-shadow: 22px 22px #af8383;
-
+    box-shadow: 22px 22px $background-primary
   }
 
     @keyframes float{
@@ -126,7 +131,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color:rgba(#e4c4c4, 0.9);
+    background-color:rgba($background-primary, 0.9);
     border-radius: 11px;
     position: absolute;
     margin-bottom: 10rem;
@@ -158,8 +163,7 @@
       padding: 1rem 0;
     }
     &__button {
-      background-color: $background-primary;
-      border:#af8383;
+      background-color:#af8383;
       border-radius: 50px;
       color: #1b0f17;
       font-weight: 700;

@@ -49,7 +49,6 @@ function Ukkon({
       <section className="portfolio">
         <div className="portfolio__title">
           <motion.h2
-            // ref={ref}
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={showTitle}
@@ -57,7 +56,6 @@ function Ukkon({
             ukkon
           </motion.h2>
           <motion.h3
-            // ref={ref}
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={showTitle}
@@ -65,19 +63,20 @@ function Ukkon({
             javascript | html | css
           </motion.h3>
         </div>
-        <motion.div
-          className="main__imgContainer main__imgContainer--bocapital"
-          // ref={ref}
-          animate={inView ? "visible" : "hidden"}
-          initial="hidden"
-          variants={imageRight}
-        >
-          <img
-            src="../../images/ukkon.png"
-            alt="ukkon website"
-            className="main__img "
-          />
-        </motion.div>
+        <a href="https://iths-jennifer-bunner.github.io/iths-slutprojekt-javascript/index.html">
+          <motion.div
+            className="main__imgContainer main__imgContainer--bocapital"
+            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            variants={imageRight}
+          >
+            <img
+              src="../../images/ukkon.png"
+              alt="ukkon website"
+              className="main__img "
+            />
+          </motion.div>
+        </a>
       </section>
     </div>
   );
