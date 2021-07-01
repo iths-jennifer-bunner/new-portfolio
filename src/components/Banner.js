@@ -30,6 +30,9 @@ const Banner = () => {
     setTimeout(() => {
       setPlayMarquee(true);
     }, 2000);
+    return () => {
+      setPlayMarquee(true);
+    };
   }, []);
   return (
     <div>

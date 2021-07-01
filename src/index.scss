@@ -11,7 +11,11 @@
 
 p,
 span {
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-family: $headline-secondary;
+}
+p{
+  color: $primary;
 }
 
 html {
@@ -23,6 +27,7 @@ h1{
   font-family: $headline-primary;
   font-weight: 700;
   font-size: 5rem;
+  color: $primary;
   // line-height: 60px;
 
 }
@@ -30,12 +35,21 @@ h2{
   font-family: $headline-secondary;
   font-weight: 400;
   font-size: 5rem;
+  color: $primary;
   // line-height: 110px;
 }
-h3{
+h3 {
   font-family: $headline-secondary;
   font-weight: 700;
   font-size: 2rem;
+  color: $primary;
+}
+ h4{
+  font-family: $headline-secondary;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: $primary;
 }
 
 
@@ -44,15 +58,19 @@ h3{
 
 .wrapper {
   padding: 4rem;
-  
+    @include lg {
+    padding: 15rem 15rem;
+  }
 }
 
 
-@include md{
+
   h1{
+    @include md{
     font-size: 10rem;
     line-height: 130px;
   }
+}
   h2{
     @include md{
       font-size: 10rem;
@@ -61,10 +79,8 @@ h3{
       font-weight: 600;
     }
   }
-}
-@include lg {
-  .wrapper{
-    padding: 15rem 15rem;
+h4{
+  @include md{
+    font-size: 4rem;
   }
-
 }

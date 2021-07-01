@@ -1,0 +1,192 @@
+@import "../App.scss";
+@import url("https://fonts.googleapis.com/css?family=Baloo+2:400,800&display=swap");
+
+.about{
+  &__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0rem 3rem;
+  @include md{
+    padding: 0rem 20rem;
+  }
+  }
+
+  &__textContainer{
+      @include row;
+      justify-content: center;
+      align-items: center
+
+  }
+  &__text{
+    max-width: 80rem;
+    text-transform:lowercase ;
+    padding-bottom: 5rem;
+  }
+  &__imageContainer{
+    border-radius: 50%;
+    height:25rem;
+    width: 25rem;
+    @include md{
+      padding-left: 15rem;
+      height:35rem;
+      width: 35rem;
+    }
+  }
+  &__image{
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+  } 
+  &__titleBox{
+  @include row;
+  padding: 5rem 0;
+  @include md{
+    padding: 10rem 0;
+  }
+  } 
+  &__title{
+    text-transform: uppercase;
+    &--stroke{
+      @include text-border;
+      color: $secondary;
+      padding-right: 10rem;
+    }
+  }
+  &__bubble{
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+    mix-blend-mode: multiply; text-align: center;
+    text-transform: uppercase; font-weight: bold;
+    letter-spacing: 3px; font-size: 15px;
+    background-color: #ffffff;
+    border: 1px solid rgba(#919191, 0.6);
+    padding: 50px; border-radius: 11px;
+    position: relative;
+    box-shadow: 20px 20px #af8383;
+    font-family: "Baloo 2" ;
+    cursor: pointer;
+  }
+  &__bubble:after {
+    transform: translateY(0px); content: ".";
+    animation: float2 5s ease-in-out infinite;
+    -webkit-text-fill-color: hsl(0, 0%, 100%);
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+    text-shadow: 22px 22px #af8383;
+    text-align: left; font-size: 55px;
+    font-weight: bold; line-height: 30px;
+    width: 55px; height: 11px;
+    border-radius: 11px;
+    background-color: #ffffff;
+    border: 1px solid #919191;
+    position: absolute;
+    display: block; bottom: -30px;
+    left: 0; z-index: -2;
+    box-shadow: 22px 22px #af8383;
+
+  }
+
+    @keyframes float{
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    @keyframes float2{
+      0% {
+        line-height: 30px;
+        transform: translateY(0px);
+      }
+      55% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-20px);
+        line-height: 10px;
+
+      }
+      100% {
+        line-height:30px;
+        transform: translateY(0px);
+      }
+    }
+  }  
+  
+  // CONTACT FORM
+  .popUp__wrapper{
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgba(#e4c4c4, 0.9);
+    border-radius: 11px;
+    position: absolute;
+    margin-bottom: 10rem;
+    padding-bottom: 5rem;
+    @include md{
+      
+    }
+  }
+.close{
+  position: relative;
+  // top: -5rem;
+  display: flex;
+  align-self: self-end;
+  color:#1b0f17;
+  padding-left: 3rem;
+  font-size: 5rem;
+  cursor: pointer;
+  
+}
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    &__containers {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+    &__button {
+      background-color: $background-primary;
+      border:#af8383;
+      border-radius: 50px;
+      color: #1b0f17;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 4px 4px 8px rgba(#bea4a4, .7),-4px -4px 8px rgba(#f0e3e3, .7) ;
+    }
+  }
+  
+  input,
+  textarea {
+    padding: 2rem 1.5rem;
+    border-radius: 11px;
+    border: #bea4a4;
+    box-shadow: 4px 4px 8px rgba(#bea4a4, .7),-4px -4px 8px rgba(#f0e3e3, .7) ;
+    width: 20rem;
+  }
+  
+  @include md {
+    input,
+    textarea {
+      padding: 2rem 2rem;
+      width: 30rem;
+    }
+  }
+
+  .contact-form p{
+    color:#1b0f17;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
