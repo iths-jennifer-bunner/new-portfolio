@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 
-const fade = {
-  visible: {
-    opacity: 1,
-    // x: 0,
-    scale: 1,
-    transition: { ease: "easeOut", duration: 2 },
-  },
-  hidden: {
-    opacity: 0,
-    // x: -50,
-    scale: 0.5,
-  },
-};
+function PopUp(props) {
+  const fade = {
+    visible: {
+      opacity: 1,
+      // x: 0,
+      scale: 1,
+      transition: { ease: "easeOut", duration: 1 },
+    },
+    hidden: {
+      opacity: 0,
+      // x: -50,
+      scale: 0.5,
+    },
+  };
 
-function PopUp(props, { reference }) {
   function sendEmail(e) {
     e.preventDefault();
 
@@ -49,7 +49,6 @@ function PopUp(props, { reference }) {
   return (
     <motion.div
       className="popUp__wrapper"
-      ref={reference}
       initial="hidden"
       animate="visible"
       variants={fade}

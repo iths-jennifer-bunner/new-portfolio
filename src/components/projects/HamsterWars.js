@@ -6,7 +6,7 @@ import { IntersectionContext } from "../../components/IntersectionObserver";
 function HamsterWars({
   delayOrder, // order of appearance
   duration = 1,
-  easing = [0.42, 0, 0.58, 1], // [number, number, number, number] | "linear" | "easeIn" | "easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" | "backInOut" | "anticipate" | EasingFunction;
+  easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
   const transition = useMemo(
@@ -25,7 +25,7 @@ function HamsterWars({
     },
     hidden: {
       opacity: 0,
-      y: 50,
+      y: 100,
       transition,
     },
   };

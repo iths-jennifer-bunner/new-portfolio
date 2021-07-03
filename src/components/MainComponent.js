@@ -1,7 +1,6 @@
 import React, { useMemo, useContext } from "react";
 import "../styles/MainComponent.scss";
 import { motion } from "framer-motion";
-import {} from "react-use";
 import {
   IntersectionObserver,
   IntersectionContext,
@@ -12,10 +11,9 @@ import HamsterWars from "./projects/HamsterWars";
 import Ukkon from "./projects/Ukkon";
 
 function MainComponent({
-  children,
-  delayOrder, // order of appearance
+  delayOrder,
   duration = 1,
-  easing = [0.42, 0, 0.58, 1], // [number, number, number, number] | "linear" | "easeIn" | "easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" | "backInOut" | "anticipate" | EasingFunction;
+  easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
   const transition = useMemo(
@@ -28,12 +26,12 @@ function MainComponent({
   );
   const Title = {
     visible: {
-      y: 1,
+      y: 0,
       opacity: 1,
       transition,
     },
     hidden: {
-      y: 30,
+      y: 100,
       opacity: 0,
       transition,
     },
@@ -44,14 +42,13 @@ function MainComponent({
       <div className="main__wrapper">
         <IntersectionObserver>
           <motion.div
+            className="main__titleBox"
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={Title}
           >
-            <div className="main__titleBox">
-              <h1 className="main__title main__title--firstWord">SELECTED</h1>
-              <h1 className="main__title main__title--stroke">PROJECTS :</h1>
-            </div>
+            <h1 className="main__title main__title--firstWord">SELECTED</h1>
+            <h1 className="main__title main__title--stroke">PROJECTS :</h1>
           </motion.div>
         </IntersectionObserver>
         <IntersectionObserver>

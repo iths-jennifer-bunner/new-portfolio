@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { IntersectionContext } from "../../components/IntersectionObserver";
 
 function BoCapital({
-  delayOrder, // order of appearance
-  duration = 1,
-  easing = [0.42, 0, 0.58, 1], // [number, number, number, number] | "linear" | "easeIn" | "easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" | "backInOut" | "anticipate" | EasingFunction;
+  delayOrder,
+  duration = 0.8,
+  easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
   const transition = useMemo(
@@ -26,7 +26,7 @@ function BoCapital({
     },
     hidden: {
       opacity: 0,
-      y: 50,
+      y: 100,
       transition,
     },
   };

@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Buttons.scss";
+import { motion } from "framer-motion";
 
-function Buttons(props, { reference, navClick }) {
-  const handleClick = () => {
-    props.togglePop();
-  };
+function Buttons(props) {
+  const [shouldShowActions, setShouldShowActions] = useState(false);
+  const [lastYPos, setLastYPos] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      const yPos = window.scrollY;
+      const isScrollingUp = yPos < lastYPos;
+
+      setShouldShowActions(isScrollingUp);
+      setLastYPos(yPos);
+    }
+    window.addEventListener("scroll", handleScroll, false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, [lastYPos]);
 
   return (
     <div className="buttons">
-      <div className="frame">
+      <motion.div
+        className="frame"
+        animate={{ opacity: shouldShowActions ? 1 : 0 }}
+        initial={{ opacity: 0 }}
+        transition={{ opacity: { duration: 0.2 } }}
+      >
         <a
           href="https://www.linkedin.com/in/jenniferbunner810/"
           className="btn"
@@ -18,10 +37,10 @@ function Buttons(props, { reference, navClick }) {
         <a href="https://github.com/iths-jennifer-bunner" className="btn">
           <i className="fab fa-github"></i>
         </a>
-        <div className="btn" ref={reference} onClick={handleClick}>
+        <div className="btn" onClick={props.handleScrollToElement}>
           <i className="far fa-envelope" style={{ color: " #ea4c89" }}></i>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo+2:400,800&display=swap");
 
 .about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__wrapper{
   display: flex;
   justify-content: center;
@@ -163,7 +166,7 @@
       padding: 1rem 0;
     }
     &__button {
-      background-color:#af8383;
+      background-color:#ea4c89;
       border-radius: 50px;
       color: #1b0f17;
       font-weight: 700;
