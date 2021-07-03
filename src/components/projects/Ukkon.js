@@ -45,7 +45,12 @@ function Ukkon({
     },
   };
   return (
-    <div>
+    <div className="portfolio-wrapper">
+      <p className="portfolio__text">
+        Case: Well this is my first final project I did after only a month in
+        school. Where I only knew "vanilla javascript". It was before I learnt
+        any frameworks.
+      </p>
       <section className="portfolio">
         <div className="portfolio__title">
           <motion.h2

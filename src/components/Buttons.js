@@ -3,18 +3,23 @@ import "../styles/Buttons.scss";
 import { motion } from "framer-motion";
 
 function Buttons(props) {
-  const [shouldShowActions, setShouldShowActions] = useState(false);
   const [lastYPos, setLastYPos] = useState(0);
+  const [shouldShowActions, setShouldShowActions] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
-      const yPos = window.scrollY;
-      const isScrollingUp = yPos < lastYPos;
+      if (window.innerWidth < 768) {
+        const yPos = window.scrollY;
+        const isScrollingUp = yPos < lastYPos;
 
-      setShouldShowActions(isScrollingUp);
-      setLastYPos(yPos);
+        setShouldShowActions(isScrollingUp);
+        setLastYPos(yPos);
+      } else {
+        setShouldShowActions(true);
+      }
     }
     window.addEventListener("scroll", handleScroll, false);
+
     return () => {
       window.removeEventListener("scroll", handleScroll, false);
     };

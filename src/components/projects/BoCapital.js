@@ -46,7 +46,7 @@ function BoCapital({
     },
   };
   return (
-    <div>
+    <div className="boCapital-wrapper">
       <section className="boCapital">
         <a href="https://bocapital.se/">
           <motion.figure
@@ -80,6 +80,11 @@ function BoCapital({
           </motion.h3>
         </div>
       </section>
+      <p className="boCapital__text">
+        Case: They needed a marketing site for the product they are developing
+        and I was given full responisbility to build the design. From designing
+        it in Figma to deploy it.
+      </p>
     </div>
   );
 }

@@ -2,14 +2,15 @@
 
 .buttons{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
   position:sticky;
   top: 0;
   z-index: 100;
   @include md {
-    top: 30rem;
+    justify-content: flex-end;
+    top: 25rem;
     margin-top: -40rem;
     padding: 5rem;
   }

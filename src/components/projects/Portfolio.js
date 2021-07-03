@@ -45,7 +45,13 @@ function Portfolio({
     },
   };
   return (
-    <div>
+    <div className="portfolio-wrapper">
+      <p className="portfolio__text">
+        Case: My first portfolio site i did as a school project. I wanted to
+        express me and how I like bright colors and soft shapes. I also wanted
+        to only use pure javascript for all the transitions and animations for
+        practice.
+      </p>
       <section className="portfolio">
         <div className="portfolio__title">
           <motion.h2

@@ -45,7 +45,7 @@ function HamsterWars({
     },
   };
   return (
-    <div>
+    <div className="boCapital-wrapper">
       <section className="hamster">
         <a href="http://fab-hamster-wars.herokuapp.com/">
           <motion.div
@@ -78,6 +78,12 @@ function HamsterWars({
           </motion.h3>
         </motion.div>
       </section>
+      <p className="boCapital__text">
+        Case: My first "fullstack" project. Its a game where you can vote on
+        cutest hamsters, see top & bottom 5 hamsters, and form where you can add
+        your own hamsters. I made my own api for the hamsters thats stored in
+        Firebase/Firestore.
+      </p>
     </div>
   );
 }
