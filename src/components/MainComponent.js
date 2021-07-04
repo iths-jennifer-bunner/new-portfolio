@@ -12,7 +12,7 @@ import Ukkon from "./projects/Ukkon";
 
 function MainComponent({
   delayOrder,
-  duration = 1,
+  duration = 2,
   easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
@@ -31,7 +31,7 @@ function MainComponent({
       transition,
     },
     hidden: {
-      y: 100,
+      y: 200,
       opacity: 0,
       transition,
     },
@@ -40,16 +40,37 @@ function MainComponent({
   return (
     <>
       <div className="main__wrapper">
+        <div className="main__titleBox">
+          <IntersectionObserver>
+            <motion.h1
+              className="main__title main__title--firstWord"
+              animate={inView ? "visible" : "hidden"}
+              initial="hidden"
+              variants={Title}
+            >
+              SELECTED
+            </motion.h1>
+          </IntersectionObserver>
+          <IntersectionObserver>
+            <motion.h1
+              className="main__title main__title--stroke"
+              animate={inView ? "visible" : "hidden"}
+              initial="hidden"
+              variants={Title}
+            >
+              PROJECTS :
+            </motion.h1>
+          </IntersectionObserver>
+        </div>
         <IntersectionObserver>
-          <motion.div
-            className="main__titleBox"
+          <motion.h3
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={Title}
+            className="main__subtitle"
           >
-            <h1 className="main__title main__title--firstWord">SELECTED</h1>
-            <h1 className="main__title main__title--stroke">PROJECTS :</h1>
-          </motion.div>
+            if you are curious to see the website "live", click on the image ;)
+          </motion.h3>
         </IntersectionObserver>
         <IntersectionObserver>
           <BoCapital />

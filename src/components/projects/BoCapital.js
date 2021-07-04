@@ -5,7 +5,7 @@ import { IntersectionContext } from "../../components/IntersectionObserver";
 
 function BoCapital({
   delayOrder,
-  duration = 0.8,
+  duration = 1.5,
   easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
@@ -80,11 +80,16 @@ function BoCapital({
           </motion.h3>
         </div>
       </section>
-      <p className="boCapital__text">
-        Case: They needed a marketing site for the product they are developing
-        and I was given full responisbility to build the design. From designing
-        it in Figma to deploy it.
-      </p>
+      <motion.p
+        className="boCapital__text"
+        animate={inView ? "visible" : "hidden"}
+        initial="hidden"
+        variants={showTitle}
+      >
+        Case: At my first internship they needed a marketing site for the
+        product that they are developing and I was given full responsibility to
+        build the design. From designing it in Figma to deploy it.
+      </motion.p>
     </div>
   );
 }

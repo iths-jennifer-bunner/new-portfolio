@@ -54,9 +54,15 @@ function PopUp(props) {
       variants={fade}
       exit={{ y: -1000, opacity: 0, duration: 10 }}
     >
-      <span className="close" onClick={handleClick}>
+      <motion.span
+        className="close"
+        onClick={handleClick}
+        whileHover={{
+          scale: 1.5,
+        }}
+      >
         &times;
-      </span>
+      </motion.span>
       <form className="contact-form" onSubmit={sendEmail}>
         <div className="contact-form__containers">
           <label>

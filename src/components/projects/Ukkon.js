@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { IntersectionContext } from "../../components/IntersectionObserver";
 
 function Ukkon({
-  delayOrder, // order of appearance
-  duration = 1,
+  delayOrder, // order.5 of appearance
+  duration = 1.5,
   easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
@@ -40,17 +40,22 @@ function Ukkon({
     hidden: {
       opacity: 0,
       // x: 50,
-      scale: 0.5,
+      scale: 0.8,
       transition,
     },
   };
   return (
     <div className="portfolio-wrapper">
-      <p className="portfolio__text">
+      <motion.p
+        className="portfolio__text"
+        animate={inView ? "visible" : "hidden"}
+        initial="hidden"
+        variants={showTitle}
+      >
         Case: Well this is my first final project I did after only a month in
         school. Where I only knew "vanilla javascript". It was before I learnt
         any frameworks.
-      </p>
+      </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
           <motion.h2

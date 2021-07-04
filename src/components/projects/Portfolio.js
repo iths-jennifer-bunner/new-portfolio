@@ -5,7 +5,7 @@ import { IntersectionContext } from "../../components/IntersectionObserver";
 
 function Portfolio({
   delayOrder, // order of appearance
-  duration = 1,
+  duration = 1.5,
   easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
@@ -40,18 +40,23 @@ function Portfolio({
     hidden: {
       opacity: 0,
       // x: 50,
-      scale: 0.5,
+      scale: 0.8,
       transition,
     },
   };
   return (
     <div className="portfolio-wrapper">
-      <p className="portfolio__text">
-        Case: My first portfolio site i did as a school project. I wanted to
-        express me and how I like bright colors and soft shapes. I also wanted
-        to only use pure javascript for all the transitions and animations for
-        practice.
-      </p>
+      <motion.p
+        className="portfolio__text"
+        animate={inView ? "visible" : "hidden"}
+        initial="hidden"
+        variants={showTitle}
+      >
+        Case: My first portfolio site i did as a school project and on limited
+        of time. I wanted to express me and how I like bright colors and soft
+        shapes. I also wanted to only use pure javascript for all the
+        transitions and animations for practice.
+      </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
           <motion.h2

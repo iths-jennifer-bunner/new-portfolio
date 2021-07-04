@@ -2,7 +2,10 @@ import React, { useState, useMemo, useContext } from "react";
 import "../styles/About.scss";
 import PopUp from "../components/PopUp";
 import { motion, AnimatePresence } from "framer-motion";
-import { IntersectionContext } from "../components/IntersectionObserver";
+import {
+  IntersectionContext,
+  IntersectionObserver,
+} from "../components/IntersectionObserver";
 
 function About({
   myRef,
@@ -28,7 +31,7 @@ function About({
     },
     hidden: {
       opacity: 0,
-      scale: 0.8,
+      scale: 0,
       transition,
     },
   };
@@ -52,38 +55,42 @@ function About({
 
   return (
     <div className="about__wrapper">
-      <motion.div
-        className="about__textContainer"
-        animate={inView ? "visible" : "hidden"}
-        initial="hidden"
-        variants={showText}
-      >
-        <h4 className="about__text">
-          Hi, I am Jennifer Bunner and I live in Stockholm. I recently graduated
-          from the frontend development at IT-högskolan and Im currently looking
-          for a full-time job as a frontend developer.
-        </h4>
-        <div className="about__imageContainer">
-          <img
-            className="about__image"
-            alt="selfie of me"
-            src="../../images/portfolio-profile.jpg"
-          />
-        </div>
-      </motion.div>
-      <motion.div
-        className="about__titleBox"
-        ref={myRef}
-        animate={inView ? "visible" : "hidden"}
-        initial="hidden"
-        variants={showSayHi}
-      >
-        <h1 className="about__title main__title--firstWord">say</h1>
-        <h1 className="about__title about__title--stroke">hi.</h1>
-        <motion.p className="about__bubble" onClick={togglePop}>
-          Hi, Friends 💖 Pop this bubble to message me!
-        </motion.p>
-      </motion.div>
+      <IntersectionObserver>
+        <motion.div
+          className="about__textContainer"
+          animate={inView ? "visible" : "hidden"}
+          initial="hidden"
+          variants={showText}
+        >
+          <h4 className="about__text">
+            Hi, I am Jennifer Bunner and I live in Stockholm. I recently
+            graduated from the frontend development class at IT-högskolan and Im
+            looking for a full-time job as a frontend developer.
+          </h4>
+          <div className="about__imageContainer">
+            <img
+              className="about__image"
+              alt="selfie of me"
+              src="../../images/portfolio-profile.jpg"
+            />
+          </div>
+        </motion.div>
+      </IntersectionObserver>
+      <IntersectionObserver>
+        <motion.div
+          className="about__titleBox"
+          ref={myRef}
+          animate={inView ? "visible" : "hidden"}
+          initial="hidden"
+          variants={showSayHi}
+        >
+          <h1 className="about__title main__title--firstWord">say</h1>
+          <h1 className="about__title about__title--stroke">hi.</h1>
+          <motion.p className="about__bubble" onClick={togglePop}>
+            Hi, Friends 💖 Pop this bubble to message me!
+          </motion.p>
+        </motion.div>
+      </IntersectionObserver>
       <AnimatePresence>
         {seen ? <PopUp toggle={setSeen} /> : false}
       </AnimatePresence>

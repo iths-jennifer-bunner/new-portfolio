@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
   &__wrapper{
   display: flex;
   justify-content: center;
@@ -12,7 +13,7 @@
   flex-direction: column;
   padding: 0rem 3rem;
   @include md{
-    padding: 0rem 20rem;
+    padding: 10rem 20rem;
   }
   }
 
@@ -134,7 +135,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color:rgba($background-primary, 0.9);
+    background: linear-gradient(83.65deg, #F0EFF1 0%, rgba(234, 76, 137, 0.12) 101.16%);
     border-radius: 11px;
     position: absolute;
     margin-bottom: 10rem;
@@ -166,7 +167,7 @@
       padding: 1rem 0;
     }
     &__button {
-      background-color:#ea4c89;
+      background: linear-gradient(90deg, #EA4C89 0%, rgba(14, 118, 168, 0.61) 100%);
       border-radius: 50px;
       color: #1b0f17;
       font-weight: 700;

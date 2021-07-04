@@ -5,7 +5,7 @@ import { IntersectionContext } from "../../components/IntersectionObserver";
 
 function HamsterWars({
   delayOrder, // order of appearance
-  duration = 1,
+  duration = 1.5,
   easing = [0.42, 0, 0.58, 1],
 }) {
   const { inView } = useContext(IntersectionContext);
@@ -40,7 +40,7 @@ function HamsterWars({
     hidden: {
       opacity: 0,
       // x: -50,
-      scale: 0.5,
+      scale: 0.8,
       transition,
     },
   };
@@ -78,12 +78,17 @@ function HamsterWars({
           </motion.h3>
         </motion.div>
       </section>
-      <p className="boCapital__text">
+      <motion.p
+        className="boCapital__text"
+        animate={inView ? "visible" : "hidden"}
+        initial="hidden"
+        variants={showTitle}
+      >
         Case: My first "fullstack" project. Its a game where you can vote on
         cutest hamsters, see top & bottom 5 hamsters, and form where you can add
         your own hamsters. I made my own api for the hamsters thats stored in
         Firebase/Firestore.
-      </p>
+      </motion.p>
     </div>
   );
 }
