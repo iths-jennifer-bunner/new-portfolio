@@ -53,8 +53,8 @@ function Ukkon({
         variants={showTitle}
       >
         Case: Well this is my first final project I did after only a month in
-        school. Where I only knew "vanilla javascript". It was before I learnt
-        any frameworks.
+        school. When I only knew "vanilla javascript" and before I learnt any
+        frameworks.
       </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
