@@ -7,7 +7,7 @@
   padding: 2rem;
   position:sticky;
   top: 0;
-  // z-index: 100;
+  z-index: 100;
   @include md {
     justify-content: flex-end;
     top: 25rem;
@@ -16,6 +16,7 @@
   }
 }
 .frame{
+  background-color: $secondary;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
