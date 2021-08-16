@@ -12,7 +12,8 @@
     justify-content: flex-end;
     top: 25rem;
     margin-top: -40rem;
-    padding: 5rem;
+    padding-right: 2rem;
+    z-index: -100;
   }
 }
 .frame{
@@ -35,7 +36,7 @@
   @include md{
     flex-direction: column;
     height: 300px; 
-    width: 80px;
+    width: 60px;
   }
 }
 .btn{
