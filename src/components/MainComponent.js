@@ -9,6 +9,7 @@ import BoCapital from "./projects/BoCapital";
 import Portfolio from "./projects/Portfolio";
 import HamsterWars from "./projects/HamsterWars";
 import Ukkon from "./projects/Ukkon";
+import Ankra from "./projects/Ankra";
 
 function MainComponent({
   delayOrder,
@@ -62,15 +63,18 @@ function MainComponent({
             </motion.h1>
           </IntersectionObserver>
         </div>
-        <IntersectionObserver>
+        {/* <IntersectionObserver>
           <motion.h3
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={Title}
             className="main__subtitle"
           >
-            if you are curious to see the website "live", click on the image ;)
+            if you are curious to see the website "live", click on the title ;)
           </motion.h3>
+        </IntersectionObserver> */}
+        <IntersectionObserver>
+          <Ankra />
         </IntersectionObserver>
         <IntersectionObserver>
           <BoCapital />

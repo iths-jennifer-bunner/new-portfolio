@@ -88,6 +88,9 @@ function HamsterWars({
         cutest hamsters, see top & bottom 5 hamsters, and form where you can add
         your own hamsters. I made my own api for the hamsters thats stored in
         Firebase/Firestore.
+        <span>
+          <a href="http://fab-hamster-wars.herokuapp.com/"> Link to website</a>
+        </span>
       </motion.p>
     </div>
   );

@@ -62,6 +62,7 @@ function BoCapital({
             />
           </motion.figure>
         </a>
+
         <div className="boCapital__title">
           <motion.h2
             animate={inView ? "visible" : "hidden"}
@@ -70,6 +71,7 @@ function BoCapital({
           >
             bocapital
           </motion.h2>
+
           <motion.h3
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
@@ -89,6 +91,9 @@ function BoCapital({
         Case: At my first internship they needed a marketing site for the
         product that they are developing and I was given full responsibility to
         build the design. From designing it in Figma to deploy it.
+        <span>
+          <a href="https://bocapital.se/"> Link to website</a>
+        </span>
       </motion.p>
     </div>
   );

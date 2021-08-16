@@ -3,7 +3,7 @@ import "../../styles/MainComponent.scss";
 import { motion } from "framer-motion";
 import { IntersectionContext } from "../../components/IntersectionObserver";
 
-function Portfolio({
+function Ankra({
   delayOrder, // order of appearance
   duration = 1.5,
   easing = [0.42, 0, 0.58, 1],
@@ -52,36 +52,32 @@ function Portfolio({
         initial="hidden"
         variants={showTitle}
       >
-        Case: My first portfolio site i did as a school project and on limited
-        of time. I wanted to express me and how I like bright colors and soft
-        shapes. I also wanted to only use pure javascript for all the
-        transitions and animations for practice.{" "}
+        Case: A group project we did in school. We were going to create a site
+        for a fictional company. We created our own theme for scratch for this
+        page using custom fields and session variable as some of the features..{" "}
         <span>
-          <a href="https://jennifer-bunners-portfolio.netlify.app/">
-            Link to website
-          </a>
+          <a href="http://ankra.jakobg.se/"> Link to website</a>
         </span>
       </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
-          <a href="https://jennifer-bunners-portfolio.netlify.app/">
-            <motion.h2
-              animate={inView ? "visible" : "hidden"}
-              initial="hidden"
-              variants={showTitle}
-            >
-              portfolio
-            </motion.h2>
-          </a>
+          <motion.h2
+            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            variants={showTitle}
+          >
+            ankra
+          </motion.h2>
+
           <motion.h3
             animate={inView ? "visible" : "hidden"}
             initial="hidden"
             variants={showTitle}
           >
-            react.js | javascript | html | sass | node
+            wordpress | javascript | jquery | sass | php |
           </motion.h3>
         </div>
-        <a href="https://jennifer-bunners-portfolio.netlify.app/">
+        <a href="http://ankra.jakobg.se/">
           <motion.div
             className="main__imgContainer main__imgContainer--bocapital"
             animate={inView ? "visible" : "hidden"}
@@ -89,8 +85,8 @@ function Portfolio({
             variants={imageRight}
           >
             <img
-              src="../../images/portfolio.png"
-              alt="portal website"
+              src="../../images/ankra_desktop.png"
+              alt="ankra website"
               className="main__img "
             />
           </motion.div>
@@ -100,4 +96,4 @@ function Portfolio({
   );
 }
 
-export default Portfolio;
+export default Ankra;

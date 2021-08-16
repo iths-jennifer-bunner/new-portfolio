@@ -54,7 +54,12 @@ function Ukkon({
       >
         Case: Well this is my first final project I did after only a month in
         school. When I only knew "vanilla javascript" and before I learnt any
-        frameworks.
+        frameworks.{" "}
+        <span>
+          <a href="https://iths-jennifer-bunner.github.io/iths-slutprojekt-javascript/index.html">
+            Link to website
+          </a>
+        </span>
       </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
