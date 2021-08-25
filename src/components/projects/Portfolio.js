@@ -88,10 +88,11 @@ function Portfolio({
             initial="hidden"
             variants={imageRight}
           >
-            <img
+            <motion.img
               src="../../images/portfolio.png"
               alt="portal website"
               className="main__img "
+              whileHover={{ scale: 1.03 }}
             />
           </motion.div>
         </a>

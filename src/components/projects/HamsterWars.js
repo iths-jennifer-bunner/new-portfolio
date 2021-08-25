@@ -54,10 +54,11 @@ function HamsterWars({
             initial="hidden"
             variants={imageLeft}
           >
-            <img
+            <motion.img
               src="../../images/hamsterwars.png"
               alt="hamsterwars website"
               className="hamster__img"
+              whileHover={{ scale: 1.03 }}
             />
           </motion.div>
         </a>

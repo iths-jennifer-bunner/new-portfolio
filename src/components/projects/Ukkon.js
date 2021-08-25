@@ -85,10 +85,11 @@ function Ukkon({
             initial="hidden"
             variants={imageRight}
           >
-            <img
+            <motion.img
               src="../../images/ukkon.png"
               alt="ukkon website"
               className="main__img "
+              whileHover={{ scale: 1.03 }}
             />
           </motion.div>
         </a>

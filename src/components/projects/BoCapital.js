@@ -55,10 +55,11 @@ function BoCapital({
             initial="hidden"
             variants={imageLeft}
           >
-            <img
+            <motion.img
               src="../../images/bocapital.png"
               alt="boCapital website"
               className="main__img"
+              whileHover={{ scale: 1.03 }}
             />
           </motion.figure>
         </a>

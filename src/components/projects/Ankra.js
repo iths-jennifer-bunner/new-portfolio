@@ -44,6 +44,7 @@ function Ankra({
       transition,
     },
   };
+
   return (
     <div className="portfolio-wrapper">
       <motion.p
@@ -74,7 +75,7 @@ function Ankra({
             initial="hidden"
             variants={showTitle}
           >
-            wordpress | javascript | jquery | sass | php |
+            wordpress | javascript | jquery | sass | php
           </motion.h3>
         </div>
         <a href="http://ankra.jakobg.se/">
@@ -84,10 +85,11 @@ function Ankra({
             initial="hidden"
             variants={imageRight}
           >
-            <img
+            <motion.img
               src="../../images/ankra_desktop.png"
               alt="ankra website"
               className="main__img "
+              whileHover={{ scale: 1.03 }}
             />
           </motion.div>
         </a>
