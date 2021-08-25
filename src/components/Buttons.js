@@ -33,18 +33,27 @@ function Buttons(props) {
         initial={{ opacity: 0 }}
         transition={{ opacity: { duration: 0.2 } }}
       >
-        <a
+        <motion.a
           href="https://www.linkedin.com/in/jenniferbunner810/"
           className="btn"
+          whileHover={{ scale: 1.03 }}
         >
           <i className="fab fa-linkedin-in" style={{ color: " #0e76a8" }}></i>
-        </a>
-        <a href="https://github.com/iths-jennifer-bunner" className="btn">
+        </motion.a>
+        <motion.a
+          href="https://github.com/iths-jennifer-bunner"
+          className="btn"
+          whileHover={{ scale: 1.03 }}
+        >
           <i className="fab fa-github"></i>
-        </a>
-        <div className="btn" onClick={props.handleScrollToElement}>
+        </motion.a>
+        <motion.div
+          className="btn"
+          whileHover={{ scale: 1.03 }}
+          onClick={props.handleScrollToElement}
+        >
           <i className="far fa-envelope" style={{ color: " #ea4c89" }}></i>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

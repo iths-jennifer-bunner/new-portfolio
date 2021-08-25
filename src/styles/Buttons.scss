@@ -10,10 +10,9 @@
   z-index: 100;
   @include md {
     justify-content: flex-end;
-    top: 25rem;
-    margin-top: -40rem;
+    // top: 0;
     padding-right: 2rem;
-    z-index: -100;
+    z-index: 1;
   }
 }
 .frame{
