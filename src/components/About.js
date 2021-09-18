@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useContext } from "react";
 import "../styles/About.scss";
 import PopUp from "../components/PopUp";
+import Resume from "../Documents/Resume.pdf";
+import Diploma from "../Documents/Diploma.pdf";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   IntersectionContext,
@@ -73,6 +75,30 @@ function About({
               alt="selfie of me"
               src="../../images/portfolio-profile.jpg"
             />
+          </div>{" "}
+          <div className="about__pdfContainer">
+            <a href={Resume} target="_blank" rel="noreferrer">
+              <motion.h3
+                className="about__pdfText"
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: "0px 0px 8px rgb(145, 145, 145)",
+                }}
+              >
+                download resume
+              </motion.h3>
+            </a>
+            <a href={Diploma} target="_blank" rel="noreferrer">
+              <motion.h3
+                className="about__pdfText"
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: "0px 0px 8px rgb(145, 145, 145)",
+                }}
+              >
+                download diploma
+              </motion.h3>
+            </a>
           </div>
         </motion.div>
       </IntersectionObserver>

@@ -26,14 +26,36 @@
   &__text{
     max-width: 80rem;
     text-transform:lowercase ;
-    padding: 5rem 0;
+    padding: 5rem 5rem 5rem 0;
   }
+  &__pdfContainer{
+    padding:  1rem ;
+    @include md{
+      padding:  5rem ;
+    }
+    
+  }
+  &__pdfText{
+    font-size: 1rem;
+    margin: 2rem;
+    padding:  2rem ;
+    border: 1px solid rgba(145, 145, 145, 0.6);
+    border-radius: 50px;
+    background: linear-gradient(
+83.65deg, #F0EFF1 0%, rgba(234, 76, 137, 0.12) 101.16%);
+    @include md{
+      font-size: 2rem;
+    }
+  }
+
+
   &__imageContainer{
     border-radius: 50%;
     height:25rem;
     width: 25rem;
+    padding-top: 5rem;
     @include md{
-      padding-left: 15rem;
+      // padding-left: 15rem;
       height:35rem;
       width: 35rem;
     }
