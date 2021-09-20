@@ -172,7 +172,7 @@ function PopUp(props) {
     if (message.length > 0) {
       return ["valid", ""];
     } else {
-      return ["invalid", `What's your heart today?`];
+      return ["invalid", `What's on your heart today?`];
     }
   }
 }
