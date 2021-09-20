@@ -75,7 +75,7 @@ function About({
               alt="selfie of me"
               src="../../images/portfolio-profile.jpg"
             />
-          </div>{" "}
+          </div>
           <div className="about__pdfContainer">
             <a href={Resume} target="_blank" rel="noreferrer">
               <motion.h3

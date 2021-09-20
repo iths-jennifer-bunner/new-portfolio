@@ -32,6 +32,7 @@
     padding:  1rem ;
     @include md{
       padding:  5rem ;
+      z-index: 1;
     }
     
   }
