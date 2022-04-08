@@ -1,166 +1,177 @@
-@import "../App.scss";
+@import '../App.scss';
 
-.main{
-  &__wrapper{
+.main {
+  &__wrapper {
     padding: 10rem 2rem 0 2rem;
-    @include md{
+    @include md {
       padding: 10rem;
     }
-    @include xxxl{
+    @include xxxl {
       padding: 10rem 20rem 10rem 20rem;
     }
   }
-  &__titleBox{
+  &__titleBox {
     @include row;
     justify-content: center;
     margin: 0 0 5rem 0;
   }
-  &__title{
+  &__title {
     text-transform: lowercase;
-    &--stroke{
+    &--stroke {
       color: $secondary;
       @include text-border;
     }
-    &--firstWord{
+    &--firstWord {
       padding-right: 2rem;
     }
-    }
-    &__imgContainer{
-      z-index: -1;
+  }
+  &__imgContainer {
+    z-index: -1;
+    height: auto;
+    width: auto;
+    background: linear-gradient(
+      83.65deg,
+      #f0eff1 0%,
+      rgba(234, 76, 137, 0.12) 101.16%
+    );
+    padding: 5rem;
+    @include xl {
+      width: 75rem;
       height: auto;
-      width: auto;
-      background: linear-gradient(83.65deg, #F0EFF1 0%, rgba(234, 76, 137, 0.12) 101.16%);
-      padding: 5rem;
-      @include xl{
-        width: 75rem;
-        height: auto;
-        padding: 10rem;
-      }
-
-
+      padding: 10rem;
     }
-    &__img{
+  }
+  &__img {
+    z-index: -2;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    filter: drop-shadow(8px 8px 8px #585858) ;
+    filter: drop-shadow(8px 8px 8px #585858);
   }
-  &__subtitle{
+  &__subtitle {
     text-align: center;
     padding-bottom: 2rem;
   }
 }
 
-
-.boCapital-wrapper{
+.boCapital-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   flex-wrap: wrap;
-  @include md{
+  @include md {
     margin-bottom: 10rem;
   }
 }
 
-.boCapital, .hamster{
+.boCapital,
+.hamster {
   @include row;
   padding: 5rem 0 5rem 0;
-    @include xl{
-      padding: 10rem 0 10rem 0;
-    }
-  &__title h2, h3{
-    // z-index: 10;
-    box-shadow: 4px 4px 8px rgba(#b8b8b8, .1),-4px -4px 8px rgba(#ececec, .1) ;
+  @include xl {
+    padding: 10rem 0 10rem 0;
+  }
+  &__title h2,
+  h3 {
+    z-index: 1;
+    box-shadow: 4px 4px 8px rgba(#b8b8b8, 0.1), -4px -4px 8px rgba(#ececec, 0.1);
     @include xxl {
       margin: 2rem 0 0 -45rem;
       background: #ffffff85;
     }
   }
- 
-  &__text{
+  &__title {
+    z-index: 1;
+  }
+
+  &__text {
     margin-bottom: 2rem;
-    @include md{
+    @include md {
       width: 70rem;
     }
-    @include xl{
-    width: 30rem;
-    margin-bottom: 10rem;
+    @include xl {
+      width: 30rem;
+      margin-bottom: 10rem;
     }
   }
-} 
+}
 
 //goes to right
 
-.portfolio-wrapper{
+.portfolio-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   flex-wrap: wrap;
-  @include md{
+  @include md {
     justify-content: flex-end;
   }
-  @include lg{
+  @include lg {
     justify-content: flex-end;
   }
 }
-.portfolio{
+.portfolio {
   @include row;
   justify-content: flex-end;
-  padding: 5rem 0 2rem 0 ;
-  @include md{
+  padding: 5rem 0 2rem 0;
+  @include md {
     padding-bottom: 5rem;
   }
-  @include xl{
-    padding: 0 0 10rem 0 ;
+  @include xl {
+    padding: 0 0 10rem 0;
   }
-  &__title{
+  &__title {
     z-index: 1;
   }
-  &__title h2, h3{
-    box-shadow: -4px -4px 8px rgba(#b8b8b8, .1),-4px -4px 8px rgba(#ececec, .1) ;
+  &__title h2,
+  h3 {
+    box-shadow: -4px -4px 8px rgba(#b8b8b8, 0.1),
+      -4px -4px 8px rgba(#ececec, 0.1);
     // z-index: 1;
 
-    @include xxl{
+    @include xxl {
       background: #ffffff85;
       margin: 2rem -25rem 0 0rem;
     }
   }
-  &__text{
+  &__text {
     padding-top: 2rem;
-    @include md{
+    @include md {
       padding-bottom: 0;
       width: 70rem;
     }
-    @include xl{
-    width: 30rem;
-    margin-bottom: 10rem;
-  }
+    @include xl {
+      width: 30rem;
+      margin-bottom: 10rem;
+    }
   }
 }
 
 //hamster uses different padding and shadow
-.hamster{
-  &__imgContainer{
+.hamster {
+  &__imgContainer {
     // z-index: -1;
     height: auto;
     width: auto;
-    background: linear-gradient(83.65deg, #F0EFF1 0%, rgba(234, 76, 137, 0.12) 101.16%);
+    background: linear-gradient(
+      83.65deg,
+      #f0eff1 0%,
+      rgba(234, 76, 137, 0.12) 101.16%
+    );
     padding: 5rem 0 0 5rem;
-    @include xl{
+    @include xl {
       width: 70rem;
-      
     }
-    @include xxl{
+    @include xxl {
       width: 80rem;
       padding: 10rem 0 0 10rem;
     }
   }
-  &__img{
-  height: 100%;
-  width: 100%;
-  margin-bottom: -3px;
-  object-fit: cover;
-  filter: drop-shadow(-8px -8px 8px #585858) ;
+  &__img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: -3px;
+    object-fit: cover;
+    filter: drop-shadow(-8px -8px 8px #585858);
+  }
 }
-}
-

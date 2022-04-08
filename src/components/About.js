@@ -1,13 +1,13 @@
-import React, { useState, useMemo, useContext } from "react";
-import "../styles/About.scss";
-import PopUp from "../components/PopUp";
-import Resume from "../Documents/Resume.pdf";
-import Diploma from "../Documents/Diploma.pdf";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useMemo, useContext } from 'react';
+import '../styles/About.scss';
+import PopUp from '../components/PopUp';
+import Resume from '../Documents/Resume.pdf';
+import Diploma from '../Documents/Diploma.pdf';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   IntersectionContext,
   IntersectionObserver,
-} from "../components/IntersectionObserver";
+} from '../components/IntersectionObserver';
 
 function About({
   myRef,
@@ -60,14 +60,19 @@ function About({
       <IntersectionObserver>
         <motion.div
           className="about__textContainer"
-          animate={inView ? "visible" : "hidden"}
+          animate={inView ? 'visible' : 'hidden'}
           initial="hidden"
           variants={showText}
         >
           <h4 className="about__text">
-            Hi, I am Jennifer Bunner and I live in Stockholm. I recently
-            graduated from the frontend development class at IT-högskolan and Im
-            looking for a full-time job as a frontend developer.
+            Hi, I am Jennifer Bunner and I live in Stockholm and I'm open for
+            new job opportunities working as a frontend developer. I love to be
+            creative and have a big passion for design. With knowledge such as
+            teamwork, problem solving and communication as well as an eye for
+            detail, I am used to working at a fast pace and stressful
+            situations. I am flexible and like to and try new ideas. I am not
+            afraid to challenge myself or to share my experiences and spread
+            joy. Feel free to reach out to me!
           </h4>
           <div className="about__imageContainer">
             <img
@@ -82,7 +87,7 @@ function About({
                 className="about__pdfText"
                 whileHover={{
                   scale: 1.1,
-                  boxShadow: "0px 0px 8px rgb(145, 145, 145)",
+                  boxShadow: '0px 0px 8px rgb(145, 145, 145)',
                 }}
               >
                 download resume
@@ -93,7 +98,7 @@ function About({
                 className="about__pdfText"
                 whileHover={{
                   scale: 1.1,
-                  boxShadow: "0px 0px 8px rgb(145, 145, 145)",
+                  boxShadow: '0px 0px 8px rgb(145, 145, 145)',
                 }}
               >
                 download diploma
@@ -106,7 +111,7 @@ function About({
         <motion.div
           className="about__titleBox"
           ref={myRef}
-          animate={inView ? "visible" : "hidden"}
+          animate={inView ? 'visible' : 'hidden'}
           initial="hidden"
           variants={showSayHi}
         >

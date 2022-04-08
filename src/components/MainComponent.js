@@ -1,15 +1,16 @@
-import React, { useMemo, useContext } from "react";
-import "../styles/MainComponent.scss";
-import { motion } from "framer-motion";
+import React, { useMemo, useContext } from 'react';
+import '../styles/MainComponent.scss';
+import { motion } from 'framer-motion';
 import {
   IntersectionObserver,
   IntersectionContext,
-} from "../components/IntersectionObserver";
-import BoCapital from "./projects/BoCapital";
-import Portfolio from "./projects/Portfolio";
-import HamsterWars from "./projects/HamsterWars";
-import Ukkon from "./projects/Ukkon";
-import Ankra from "./projects/Ankra";
+} from '../components/IntersectionObserver';
+import BoCapital from './projects/BoCapital';
+import Portfolio from './projects/Portfolio';
+import HamsterWars from './projects/HamsterWars';
+import Ukkon from './projects/Ukkon';
+import Ankra from './projects/Ankra';
+import MessagesApp from './projects/MessageApp';
 
 function MainComponent({
   delayOrder,
@@ -45,7 +46,7 @@ function MainComponent({
           <IntersectionObserver>
             <motion.h1
               className="main__title main__title--firstWord"
-              animate={inView ? "visible" : "hidden"}
+              animate={inView ? 'visible' : 'hidden'}
               initial="hidden"
               variants={Title}
             >
@@ -55,7 +56,7 @@ function MainComponent({
           <IntersectionObserver>
             <motion.h1
               className="main__title main__title--stroke"
-              animate={inView ? "visible" : "hidden"}
+              animate={inView ? 'visible' : 'hidden'}
               initial="hidden"
               variants={Title}
             >
@@ -63,16 +64,19 @@ function MainComponent({
             </motion.h1>
           </IntersectionObserver>
         </div>
-        {/* <IntersectionObserver>
+        <IntersectionObserver>
           <motion.h3
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={Title}
             className="main__subtitle"
           >
             if you are curious to see the website "live", click on the title ;)
           </motion.h3>
-        </IntersectionObserver> */}
+        </IntersectionObserver>
+        <IntersectionObserver>
+          <MessagesApp />
+        </IntersectionObserver>
         <IntersectionObserver>
           <Ankra />
         </IntersectionObserver>
