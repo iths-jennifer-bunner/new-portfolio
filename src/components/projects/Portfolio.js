@@ -1,7 +1,7 @@
-import React, { useMemo, useContext } from "react";
-import "../../styles/MainComponent.scss";
-import { motion } from "framer-motion";
-import { IntersectionContext } from "../../components/IntersectionObserver";
+import React, { useMemo, useContext } from 'react';
+import '../../styles/MainComponent.scss';
+import { motion } from 'framer-motion';
+import { IntersectionContext } from '../../components/IntersectionObserver';
 
 function Portfolio({
   delayOrder, // order of appearance
@@ -48,25 +48,23 @@ function Portfolio({
     <div className="portfolio-wrapper">
       <motion.p
         className="portfolio__text"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
         initial="hidden"
         variants={showTitle}
       >
         Case: My first portfolio site i did as a school project and on limited
         of time. I wanted to express me and how I like bright colors and soft
         shapes. I also wanted to only use pure javascript for all the
-        transitions and animations for practice.{" "}
-        <span>
-          <a href="https://jennifer-bunners-portfolio.netlify.app/">
-            Link to website
-          </a>
-        </span>
+        transitions and animations for practice.{' '}
+        <a href="https://jennifer-bunners-portfolio.netlify.app/">
+          Link to website
+        </a>
       </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
           <a href="https://jennifer-bunners-portfolio.netlify.app/">
             <motion.h2
-              animate={inView ? "visible" : "hidden"}
+              animate={inView ? 'visible' : 'hidden'}
               initial="hidden"
               variants={showTitle}
             >
@@ -74,7 +72,7 @@ function Portfolio({
             </motion.h2>
           </a>
           <motion.h3
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
@@ -84,7 +82,7 @@ function Portfolio({
         <a href="https://jennifer-bunners-portfolio.netlify.app/">
           <motion.div
             className="main__imgContainer main__imgContainer--bocapital"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={imageRight}
           >

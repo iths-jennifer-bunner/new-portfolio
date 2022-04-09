@@ -1,7 +1,7 @@
-import React, { useMemo, useContext } from "react";
-import "../../styles/MainComponent.scss";
-import { motion } from "framer-motion";
-import { IntersectionContext } from "../../components/IntersectionObserver";
+import React, { useMemo, useContext } from 'react';
+import '../../styles/MainComponent.scss';
+import { motion } from 'framer-motion';
+import { IntersectionContext } from '../../components/IntersectionObserver';
 
 function HamsterWars({
   delayOrder, // order of appearance
@@ -50,7 +50,7 @@ function HamsterWars({
         <a href="http://fab-hamster-wars.herokuapp.com/">
           <motion.div
             className="hamster__imgContainer"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={imageLeft}
           >
@@ -64,14 +64,14 @@ function HamsterWars({
         </a>
         <motion.div className="boCapital__title">
           <motion.h2
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
             hamsterwars
           </motion.h2>
           <motion.h3
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
@@ -81,7 +81,7 @@ function HamsterWars({
       </section>
       <motion.p
         className="boCapital__text"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
         initial="hidden"
         variants={showTitle}
       >
@@ -89,9 +89,7 @@ function HamsterWars({
         cutest hamsters, see top & bottom 5 hamsters, and form where you can add
         your own hamsters. I made my own api for the hamsters thats stored in
         Firebase/Firestore.
-        <span>
-          <a href="http://fab-hamster-wars.herokuapp.com/"> Link to website</a>
-        </span>
+        <a href="http://fab-hamster-wars.herokuapp.com/"> Link to website</a>
       </motion.p>
     </div>
   );

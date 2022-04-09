@@ -2,6 +2,10 @@
 
 .main {
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10rem 2rem 0 2rem;
     @include md {
       padding: 10rem;
@@ -16,7 +20,7 @@
     margin: 0 0 5rem 0;
   }
   &__title {
-    text-transform: lowercase;
+    text-transform: uppercase;
     &--stroke {
       color: $secondary;
       @include text-border;
@@ -53,7 +57,13 @@
     padding-bottom: 2rem;
   }
 }
-
+.componentsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  max-width: 1700px;
+}
 .boCapital-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -76,7 +86,7 @@
     z-index: 1;
     box-shadow: 4px 4px 8px rgba(#b8b8b8, 0.1), -4px -4px 8px rgba(#ececec, 0.1);
     @include xxl {
-      margin: 2rem 0 0 -45rem;
+      margin: 2rem 0 0 -55rem;
       background: #ffffff85;
     }
   }

@@ -1,7 +1,7 @@
-import React, { useMemo, useContext } from "react";
-import "../../styles/MainComponent.scss";
-import { motion } from "framer-motion";
-import { IntersectionContext } from "../../components/IntersectionObserver";
+import React, { useMemo, useContext } from 'react';
+import '../../styles/MainComponent.scss';
+import { motion } from 'framer-motion';
+import { IntersectionContext } from '../../components/IntersectionObserver';
 
 function BoCapital({
   delayOrder,
@@ -51,7 +51,7 @@ function BoCapital({
         <a href="https://bocapital.se/">
           <motion.figure
             className="main__imgContainer"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={imageLeft}
           >
@@ -66,7 +66,7 @@ function BoCapital({
 
         <div className="boCapital__title">
           <motion.h2
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
@@ -74,7 +74,7 @@ function BoCapital({
           </motion.h2>
 
           <motion.h3
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
@@ -85,16 +85,14 @@ function BoCapital({
       </section>
       <motion.p
         className="boCapital__text"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
         initial="hidden"
         variants={showTitle}
       >
         Case: At my first internship they needed a marketing site for the
         product that they are developing and I was given full responsibility to
         build the design. From designing it in Figma to deploy it.
-        <span>
-          <a href="https://bocapital.se/"> Link to website</a>
-        </span>
+        <a href="https://bocapital.se/"> Link to website</a>
       </motion.p>
     </div>
   );

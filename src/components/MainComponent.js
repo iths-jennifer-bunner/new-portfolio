@@ -71,27 +71,29 @@ function MainComponent({
             variants={Title}
             className="main__subtitle"
           >
-            if you are curious to see the website "live", click on the title ;)
+            if you are curious to see the website "live", click on the image ;)
           </motion.h3>
         </IntersectionObserver>
-        <IntersectionObserver>
-          <MessagesApp />
-        </IntersectionObserver>
-        <IntersectionObserver>
-          <Ankra />
-        </IntersectionObserver>
-        <IntersectionObserver>
-          <BoCapital />
-        </IntersectionObserver>
-        <IntersectionObserver>
-          <Portfolio />
-        </IntersectionObserver>
-        <IntersectionObserver>
-          <HamsterWars />
-        </IntersectionObserver>
-        <IntersectionObserver>
-          <Ukkon />
-        </IntersectionObserver>
+        <div className="componentsWrapper">
+          <IntersectionObserver>
+            <MessagesApp />
+          </IntersectionObserver>
+          <IntersectionObserver>
+            <Ankra />
+          </IntersectionObserver>
+          <IntersectionObserver>
+            <BoCapital />
+          </IntersectionObserver>
+          <IntersectionObserver>
+            <Portfolio />
+          </IntersectionObserver>
+          <IntersectionObserver>
+            <HamsterWars />
+          </IntersectionObserver>
+          <IntersectionObserver>
+            <Ukkon />
+          </IntersectionObserver>
+        </div>
       </div>
     </>
   );

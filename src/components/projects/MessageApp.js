@@ -90,12 +90,10 @@ function MessagesApp({
         variants={showTitle}
       >
         Case: Build a ReactJS application that communicates with a NODEJS server
-        via HTTP requests
-        <span>
-          <a href="https://my-little-message-app.herokuapp.com/">
-            Link to website
-          </a>
-        </span>
+        via HTTP requests.&nbsp;
+        <a href="https://my-little-message-app.herokuapp.com/">
+          Link to website
+        </a>
       </motion.p>
     </div>
   );

@@ -1,7 +1,7 @@
-import React, { useMemo, useContext } from "react";
-import "../../styles/MainComponent.scss";
-import { motion } from "framer-motion";
-import { IntersectionContext } from "../../components/IntersectionObserver";
+import React, { useMemo, useContext } from 'react';
+import '../../styles/MainComponent.scss';
+import { motion } from 'framer-motion';
+import { IntersectionContext } from '../../components/IntersectionObserver';
 
 function Ankra({
   delayOrder, // order of appearance
@@ -49,21 +49,19 @@ function Ankra({
     <div className="portfolio-wrapper">
       <motion.p
         className="portfolio__text"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
         initial="hidden"
         variants={showTitle}
       >
         Case: A group project we did in school. We were going to create a site
         for a fictional company. We created our own theme for scratch for this
-        page using custom fields and session variable as some of the features..{" "}
-        <span>
-          <a href="http://ankra.jakobg.se/"> Link to website</a>
-        </span>
+        page using custom fields and session variable as some of the features..{' '}
+        <a href="http://ankra.jakobg.se/"> Link to website</a>
       </motion.p>
       <section className="portfolio">
         <div className="portfolio__title">
           <motion.h2
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
@@ -71,7 +69,7 @@ function Ankra({
           </motion.h2>
 
           <motion.h3
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={showTitle}
           >
@@ -81,7 +79,7 @@ function Ankra({
         <a href="http://ankra.jakobg.se/">
           <motion.div
             className="main__imgContainer main__imgContainer--bocapital"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? 'visible' : 'hidden'}
             initial="hidden"
             variants={imageRight}
           >
