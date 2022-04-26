@@ -34,13 +34,11 @@ function MessagesApp({
   const imageLeft = {
     visible: {
       opacity: 1,
-      // x: 0,
       scale: 1,
       transition,
     },
     hidden: {
       opacity: 0,
-      // x: -50,
       scale: 0.8,
       transition,
     },

@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import { motion } from "framer-motion";
-import "../styles/PopUp.scss";
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
+import '../styles/PopUp.scss';
 
 function PopUp(props) {
   const fade = {
     visible: {
       opacity: 1,
-      // x: 0,
       scale: 1,
-      transition: { ease: "easeOut", duration: 1 },
+      transition: { ease: 'easeOut', duration: 1 },
     },
     hidden: {
       opacity: 0,
-      // x: -50,
       scale: 0.5,
     },
   };
@@ -23,10 +21,10 @@ function PopUp(props) {
 
     emailjs
       .sendForm(
-        "service_n9re6t1",
-        "template_a2uhk3r",
+        'service_n9re6t1',
+        'template_a2uhk3r',
         e.target,
-        "user_z1M4t2ArPi51hXWrBYzho"
+        'user_z1M4t2ArPi51hXWrBYzho'
       )
       .then(
         (result) => {
@@ -47,27 +45,27 @@ function PopUp(props) {
     setClick(true);
   }
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const [nameTouched, setNameTouched] = useState(false);
   const [emailTouched, setEmailTouched] = useState(false);
   const [messageTouched, setMessageTouched] = useState(false);
 
-  let [nameClass, nameError] = nameTouched ? validateName(name) : ["", ""];
-  let [emailClass, emailError] = emailTouched ? validateEmail(email) : ["", ""];
+  let [nameClass, nameError] = nameTouched ? validateName(name) : ['', ''];
+  let [emailClass, emailError] = emailTouched ? validateEmail(email) : ['', ''];
   let [messageClass, messageError] = messageTouched
     ? validateMessage(message)
-    : ["", ""];
+    : ['', ''];
 
   let formIsValid =
     nameTouched &&
     emailTouched &&
     messageTouched &&
-    nameError === "" &&
-    emailError === "" &&
-    messageError === "";
+    nameError === '' &&
+    emailError === '' &&
+    messageError === '';
 
   return (
     <motion.div
@@ -156,23 +154,23 @@ function PopUp(props) {
 
   function validateName(name) {
     if (name.length > 0) {
-      return ["valid", ""];
+      return ['valid', ''];
     } else {
-      return ["invalid", `What's your name?`];
+      return ['invalid', `What's your name?`];
     }
   }
   function validateEmail(email) {
     if (email.length > 0) {
-      return ["valid", ""];
+      return ['valid', ''];
     } else {
-      return ["invalid", `Please leave your email so I can respond :) `];
+      return ['invalid', `Please leave your email so I can respond :) `];
     }
   }
   function validateMessage(message) {
     if (message.length > 0) {
-      return ["valid", ""];
+      return ['valid', ''];
     } else {
-      return ["invalid", `What's on your heart today?`];
+      return ['invalid', `What's on your heart today?`];
     }
   }
 }

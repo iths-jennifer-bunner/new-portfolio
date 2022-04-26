@@ -1,10 +1,10 @@
-import React, { createRef } from "react";
-import "./App.scss";
-import Banner from "./components/Banner";
-import MainComponent from "./components/MainComponent";
-import About from "./components/About";
-import Buttons from "./components/Buttons";
-import { IntersectionObserver } from "./components/IntersectionObserver";
+import React, { createRef } from 'react';
+import './App.scss';
+import Banner from './components/Banner';
+import MainComponent from './components/MainComponent';
+import About from './components/About';
+import Buttons from './components/Buttons';
+import { IntersectionObserver } from './components/IntersectionObserver';
 
 function App() {
   // // Scroll down to contact
@@ -20,7 +20,6 @@ function App() {
       <MainComponent />
       <IntersectionObserver>
         <About myRef={myRef} />
-        {/* pass ref to where you want to go */}
       </IntersectionObserver>
     </div>
   );
